@@ -1,0 +1,6 @@
+# JMRESUMEE
+
+THIS IS JMRESUMEE WHICH IS YOU CAN CREATE OWN CV EAISLY 
+
+
+Thanks for your attention

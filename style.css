@@ -1,0 +1,4272 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+:root{
+    --border:1px solid black;
+    --blue:rgb(31, 155, 212);
+}
+
+
+
+
+
+
+::-webkit-scrollbar{
+    border-radius: 20px;
+    width: 5px;
+    background-color: gray;
+    position: absolute;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+}
+.icons .fa-times{
+    display: none;
+}
+
+.icons .fa-circle-info{
+
+    /* margin: 2rem; */
+    cursor: pointer;
+    color: var(--blue);
+    animation-name:info;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+
+@keyframes info{
+    0%{
+        box-shadow: 2px 4px 4px 4px var(--blue);
+    }
+    50%{
+        box-shadow: 2px 2px 2px 2px;
+    }
+    100%{
+        box-shadow: 2px 4px 4px 4px var(--blue);
+    }
+}
+
+
+nav a{
+    text-decoration: none;
+    margin: 2rem;
+    color: var(--blue);
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text-container{
+    width: 45%;
+    height: 70%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.text-container h1{
+    font-size: 68px;
+    font-weight: 800;
+}
+
+.create{
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
+    box-shadow: 2px 2px 2px 4px rgb(207, 207, 190);
+    border-radius: 10px;
+}
+
+.create p{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(58, 58, 58);
+}
+
+
+
+.cv-btn{
+    cursor: pointer;
+    width: 180px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--blue);
+    border:none;
+    border-radius: 10px;
+    box-shadow: 2px;
+    font-size: 20px;
+}
+
+.img-main{
+    width:45%;
+    height: 70%;
+}
+
+
+
+.slide-about{
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,rgb(207, 207, 207),rgb(133, 202, 207));
+    position: fixed;
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slide-about ul li{
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+.slide-about h1{
+    font-weight: 800;
+}
+
+
+
+.end-center{
+    width: 100%;
+    height: 5vh;
+    background-color: lightslategrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media(max-width:500px){
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .text-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-main{
+        width: 80%;
+    }
+    .text-container h1{
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .create{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: none;
+    }
+    .create p{
+        font-size: 16px
+    }
+    .slide-about ul li{
+        font-size: 16px;
+    }
+    .slide-about h1{
+        font-size: 16px;
+    }
+}
+
+
+
+
+@media(max-width:400px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .container h1{
+        font-size: 20px;
+    }
+    .text-container{
+        display: flex;
+        gap: 10px;
+    }
+    .text-container h1{
+        font-size: 16px;
+        font-weight: 800;
+    }
+    .create{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: none;
+    }
+    .create p{
+        font-size: 16px
+    }
+    .slide-about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+
+    /* .slide-about ul li{
+     font-size: 4px;
+    } */
+    .slide-about h1{   
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:340px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .container h1{
+        font-size: 20px;
+    }
+    .text-container{
+        display: flex;
+        gap: 10px;
+    }
+    .text-container h1{
+        font-size: 8px;
+        font-weight: 800;
+    }
+    .create{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: none;
+    }
+    .create p{
+        font-size: 16px
+    }
+    .slide-about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+
+    /* .slide-about ul li{
+     font-size: 4px;
+    } */
+    .slide-about h1{   
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .text-container h1{
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .create{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: none;
+    }
+    .create p{
+        font-size: 16px
+    }
+    .slide-about ul li{
+        font-size: 16px;
+    }
+    .slide-about h1{
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---CV IS HERE RIGHT NOW ---*/
+
+.container-cv{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+.container-cv h1{
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.bar{
+    width: 80%;
+    height: 1rem;
+    border-radius: 25px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235/var(--tw-bg-opacity));
+}
+
+
+.resume1,
+.resume2,.resume3,.resume4,.resume5,.resume6,.resume7{
+    width: 80%;
+    height: 60%;
+    box-shadow: 2px 2px 2px 4px rgb(207, 207, 190); 
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+/* .resume6{
+    overflow-x: hidden;
+    overflow-y: scroll;
+} */
+
+
+.resume2,.resume3,.resume4,.resume5,.resume6,.resume7,.resume8{
+    display: none;
+}
+
+
+
+.cv-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+}
+.cv-nav ul li{
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(175, 168, 168);
+    position: relative;
+}
+
+li.next{
+    background: transparent;
+    display: flex;
+}
+
+ .cv-nav ul li::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue);
+    left: 0;
+    bottom: -10px;
+}
+
+
+.cv-nav ul li:hover::before{
+    width: 100%;
+    transition: .5s;
+}
+
+
+.bar-animate{
+    width: 10%;
+    height: 100%;
+    background: var(--blue);
+    transition: width .3s;
+    transition-timing-function: cubic-bezier(0.3, 0.3, 0.3, 0.3);
+    border-radius: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  
+
+
+
+
+
+
+.inp-img{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inps{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 1rem;
+}
+
+.inps input{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+.inps span{
+    font-weight: 700;
+
+}
+
+.inps input:focus{
+    outline: 1px solid var(--blue);
+
+}
+
+
+
+
+.img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dfdfdf;
+}
+
+
+
+.lab-file{
+    border: var(--border);
+    cursor: pointer;
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: #fff;
+    border: none;
+}
+
+
+
+.inp-info{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.big-box{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.box1,.box2{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+
+
+
+.box1 input,.box2 input{
+    width: 100%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+
+
+
+
+
+
+
+
+.box3{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box1,.box2,.box3 span{
+    font-weight: 700;
+}
+
+
+.box3 input{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+input:focus{
+    outline: 1px solid var(--blue);
+}
+
+
+
+
+
+
+
+
+
+.buttons-center{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+} 
+
+
+
+button{
+    width: 10%;
+    border-radius: 0.75rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--blue)/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: var(--blue);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    margin: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.border-btn{
+    background-color: #fff;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+
+.border-btn:hover{
+    background-color: var(--blue);
+    color:#fff;
+}
+
+
+
+/* RESUME2 IS HERE */
+
+
+
+
+
+
+
+.school-nc{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.nc1,.nc2{
+    width:50%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nc1 input,.nc2 input{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+.nc1 span,.nc2 span{
+    font-weight: 700;
+}
+
+
+.nc-date{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.nc-start-date,.nc-end-date{
+    width:48%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.nc-sd-box1,.nc-ed-box1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 50px;
+}
+
+.start-date-select1,
+.start-date-select2,
+.start-date-select3,
+.end-date-select1,
+.end-date-select2,
+.end-date-select3{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+span{
+    font-weight: 700;
+}
+
+
+
+
+select{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    /* color-adjust: exact; */
+    print-color-adjust: exact;
+    appearance: none;
+}
+
+select:focus{
+    outline: 1px solid var(--blue);
+}
+
+
+
+
+
+
+
+.buttons-edu{
+    width: 96%;
+    height: 24%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+
+.buttons-edu button{
+    width: 10%;
+    border-radius: 0.75rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--blue)/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: var(--blue);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    margin: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+.buttons-edu .border-btn{
+    color: var(--blue);
+    background-color: #fff;
+}
+
+
+.buttons-edu .border-btn:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============RESUME3 IS HERE============ */
+
+
+
+
+
+.company-jp{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.jp1,.jp2{
+    width:50%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.jp1 input,.jp2 input{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+.jp1 span,.jp2 span{
+    font-weight: 700;
+}
+
+
+.jp-date{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.jp-start-date,.jp-end-date{
+    width:48%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.jp-sd-box1,.jp-ed-box1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 50px;
+}
+
+.start-date-select1-jp,
+.start-date-select2-jp,
+.start-date-select3-jp,
+.end-date-select1-jp,
+.end-date-select2-jp,
+.end-date-select3-jp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+span{
+    font-weight: 700;
+}
+
+
+
+
+select{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    /* color-adjust: exact; */
+    print-color-adjust: exact;
+    appearance: none;
+}
+
+select:focus{
+    outline: 1px solid var(--blue);
+}
+
+
+
+
+
+
+
+.buttons-jp{
+    width: 96%;
+    height: 24%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+
+.buttons-jp button{
+    width: 10%;
+    border-radius: 0.75rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--blue)/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: var(--blue);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    margin: 1rem;
+    cursor: pointer;
+}
+
+
+.buttons-jp .border-btn{
+    background-color: #fff;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+
+.buttons-jp .border-btn:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------Resume4 is here------ */
+
+
+.social-media-links{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.social-media-links .bigmedia{
+    height: 50%;
+    width: 100%;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+.social-media-links .bigmedia .media1,.media2{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 1rem;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+.media1 input,.media2 input{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+
+.add-media{
+    width: 96%;
+    border-radius: 0.75rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--blue)/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: var(--blue);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    margin: 1rem;
+    cursor: pointer;
+}
+.clear-media{
+    width: 96%;
+    border-radius: 0.75rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--blue)/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(219, 96, 74);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    margin: 1rem;
+    cursor: pointer;
+}
+
+
+
+.social-btn{
+    width: 96%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------RESUME5 IS HERE -------*/
+
+
+.skill-lang-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skill-lang-container .skill,.lang{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 1rem;
+    overflow-y:scroll;
+}
+
+.skill-lang-container .skill .sp-skill,.lang .lg-skill{
+    font-size: 24px;
+
+}
+.skill-lang-container .skill-name-level,.lang-name-level{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.skill-name,.lang-name,.skill-level,.lang-level{
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name input ,.lang-name input{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+} 
+
+
+.skill-inp,.lang-inp{
+    display: block;
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+
+
+
+
+
+
+.resume5-add-buttons{
+    width: 100%;
+    display: flex;
+}
+
+.resume5-add-buttons button{
+    width: 50%;
+    border: 2px solid var(--blue);
+    background: #fff;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.resume5-add-buttons button:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+
+
+
+
+
+.fa-trash{
+    color: tomato;
+    cursor: pointer;
+}
+
+
+#textarea{
+    margin: 0 1rem;
+    width: 94%;
+    display: block;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    height: 110px;
+    padding: 0.875rem;
+}
+#textarea:focus{
+    outline:1px solid var(--blue);
+}
+
+
+.resume5-buttons{
+    width: 96%;
+    height: 16%;
+    margin: 0 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----RESUME6 IS HERE----- */
+.project{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.project-name,.project-link{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.project-name input,.project-link input{
+    width: 90%;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.625rem;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+
+.textarea{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.textarea textarea{
+    width: 94%;
+    display: block;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    height: 60px;
+    padding: 0.625rem;
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+.textarea textarea:focus{
+    outline:1px solid var(--blue);
+}
+
+
+.btn-pro{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-btn{
+    width: 94%;
+    border-radius: 0.5rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.875rem;
+    height: 42px;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-btn:hover{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+
+.remove-project-btn{
+    width: 94%;
+    border-radius: 0.5rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+    padding: 0.875rem;
+    height: 42px;
+    color: rgb(219, 96, 74);
+    border: 2px solid rgb(219, 96, 74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove-project-btn:hover{
+    background-color: rgb(219, 96, 74);
+    color: #fff;
+}
+
+
+.project-end-btns{
+    width: 98%;
+    height: 22%;
+    margin: 1rem 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESUME7 IS HERE */
+
+.template-container{
+    width: 100%;
+    height: 20%;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.circle-btn1,
+.circle-btn2,
+.circle-btn3,
+.circle-btn4,
+.circle-btn5{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.circle-btn1{
+    background-color: lightblue;
+}
+
+.circle-btn1:focus{
+    outline: 3px solid lightblue;
+}
+
+.circle-btn2{
+    background-color: lightgreen;
+}
+
+.circle-btn2:focus{
+    outline: 3px solid lightgreen;
+}
+
+
+.circle-btn3{
+    background-color: lightslategray;
+}
+
+.circle-btn3:focus{
+    outline: 3px solid lightslategray;
+}
+
+
+.circle-btn4{
+    background-color: lightcoral;
+}
+
+.circle-btn4:focus{
+    outline: 3px solid lightcoral;
+}
+.circle-btn5{
+    background-color: #fff;
+}
+
+.circle-btn5:focus{
+    outline: 3px solid var(--blue);
+}
+
+
+
+.backgroundPlace{
+    width: 100%;
+    height: 40%;
+}
+
+
+
+
+.template-end-btns{
+    width: 96%;
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin:0 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container-cv */
+
+
+
+
+/* RESUME8 IS HERE */
+
+
+.resume8{
+    /* height: 2000px; */
+    width: 80%;
+    height:100%;
+    /* box-shadow: 2px 2px 2px 4px rgb(207, 207, 190);  */
+    border-radius: 10px;
+    border-bottom: none;
+}
+.download-btn{
+    width: 96%;
+}
+
+
+
+.paper{
+    height: 100%;
+}
+
+.name-job-img-side{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--border);
+}
+
+.name-job,.img-side{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.name-job .cv-name{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.name-job .cv-job{
+    font-style: italic;
+    font-weight: 100;
+}
+
+
+
+
+.img-cv{
+    width:200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.buttons-copy-img-file{
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.buttons-copy-img-file .copy-img{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(219, 96, 74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CV INFORMATION IS HERE */
+
+.cv-information{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    box-shadow: 2px 2px 2px 4px rgb(207, 207, 190); 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.left-cv{
+    width:40%;
+    height: 100%;
+     display: flex;
+    align-items: center;
+     justify-content: space-evenly;
+    flex-direction: column;   
+}
+
+
+/* CV SKILL IS HERE */
+
+.cv-skill{
+    width: 90%;
+    height: 20%;
+}
+
+
+.cv-skill span{
+    font-weight: 100;
+}
+
+.skill-text-cv{
+    display: flex;
+    gap: 5px;
+}
+
+
+.skill-text-cv span{
+    color: gray;
+}
+
+.cv-lang{
+    width: 90%;
+    height: 20%;
+}
+.lang-text-cv{
+    display: flex;
+    gap: 5px;
+}
+.lang-text-cv span{
+    color: gray;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+.cv-education{
+    width: 90%;
+    height: 20%;
+}
+
+
+.cv-education span{
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cv-social-media{
+    width: 90%;
+    height: 20%;
+}
+.cv-media{
+    display: flex;
+}
+
+
+.cv-media .social-media-url-cv{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.right-cv{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: yellow; */
+}
+
+
+
+.basic-info-cv{
+    width: 90%;
+    height: 20%;
+}
+
+
+
+.basic-info-cv span{
+    font-weight: 100;
+}
+
+.projects-cv{
+    width: 90%;
+    height: 30%;
+}
+
+.pro-cv-add{
+    display: flex;
+    gap: 5px;
+
+}
+
+.work-experience-cv{
+    width: 90%;
+    height: 40%;
+}
+
+
+.work-experience-cv span{
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+@media print {
+     body {
+      visibility: hidden;
+    } 
+
+     .resume8{
+        width: 100%;
+        /* display:flex;
+        align-items: flex-start;
+        justify-content: flex-start; */
+        overflow: hidden;
+        /* position: absolute; */
+        /* border-bottom:var(--border) ; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    .resume8 .cv-nav,.download-btn{
+        display: none;
+    }
+    .name-job-img-side .cv-name{
+        display: block;
+        font-size: 30px;
+    }
+    .cv-information,.name-job-img-side{
+      visibility: visible; 
+      /* position: absolute; */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      left: 0;
+      top: 0;
+    }
+
+    .name-job-img-side{
+        height: 20%;
+    }
+    .img-cv{
+        width:150px;
+        height: 150px;
+    }
+
+
+    .cv-social-media{
+        display: block;
+        /* height: 40%; */
+    }
+    /* .work-experience-cv{
+        height: 100%;
+    } */
+    .container-cv{
+        visibility: visible;
+        }
+    .container-cv h1,.bar-animate,.bar{
+        display: none;
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+/* For wide screen phone */
+
+
+
+
+@media(max-width:500px){
+
+
+/* ========RESUME1 IS HERE======== */
+
+
+
+    .resume1,.resume2,.resume3,.resume4,.resume5,.resume6,.resume7{
+        height: 100vh;
+        width: 85%;
+    }
+    .container-cv h1{
+        font-size: 24px;
+    }
+    .bar{
+        display: none;
+    }
+
+    .buttons-copy-img-file{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 40%;
+    }
+.cv-nav{
+    display: none;
+}
+.upload-img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+.upload-img img{
+    border: none;
+}
+.resume1-btn{
+    width: 20%;
+}
+
+.buttons-center{
+    height: 28%;
+}
+.inp-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 -0.5rem;
+}
+
+.big-box{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/* ============RESUME2 IS HERE============ */
+
+
+
+
+
+.school-nc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.nc1,.nc2{
+    width: 100%;
+}
+
+
+.nc1 input,.nc2 input{
+    width:80%;
+}
+.nc-date{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+
+.nc-start-date{
+    width: 100%;
+}
+.nc-end-date{
+    width: 100%;
+}
+
+
+
+.buttons-edu{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+
+.buttons-edu button{
+    width: 20%;
+}
+
+
+
+
+
+
+/* =========RESUME3 IS HERE========= */
+
+
+
+.company-jp{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 0; */
+}
+
+.jp1,.jp2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.jp1 input,.jp2 input{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+.jp-date{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+
+.jp-start-date{
+    width: 100%;
+}
+.jp-end-date{
+    width: 100%;
+}
+
+
+
+.buttons-jp{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.buttons-jp button{
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+/* =====RESUME4 IS HERE====== */
+
+
+
+.btn-add-remove-cv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40%;
+}
+
+
+.social-btn{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.social-btn button{
+    width: 20%;
+}
+
+
+
+
+
+/* =====RESUME5 IS HERE===== */
+
+
+.skill-lang-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 -1px;
+    height: 50%;
+}
+.skill-name-level,
+.lang-name-level{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    margin: 0;
+    height: 50%;
+    gap: 10px;
+}
+.lang{
+    width: 100%;
+    display: flex;
+}
+.skill{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#textarea{
+    max-height: 100px;
+    max-width: 85%;
+}
+.resume5-buttons{
+    width: 100%;
+    height: 21%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+
+}
+.resume5-buttons button{
+    width:20%;
+}
+
+
+
+
+
+
+
+
+
+
+/* ===========RESUME6 IS HERE========= */
+
+
+.project{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    height:60%;
+    gap: 10px;
+    margin: 0 1rem;
+}
+.project-name,.project-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project-name input,.project-link input{
+    width:80%;
+}
+
+
+.textarea{
+    height: 50%;
+}
+.textarea textarea{
+    width: 80%;
+}
+
+.project-end-btns{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.project-end-btns button{
+    width: 20%;
+}
+
+
+
+
+/* ======RESUME7 IS HERE====== */
+
+.template-container{
+    height: 40%;
+    margin: 0;
+}
+
+.template-end-btns{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.template-end-btns button{
+    width: 20%;
+}
+
+
+
+
+
+/* ======RESUME8 IS HERE====== */
+.name-job{
+    display: flex;
+    gap: 10px;
+}
+.name-job .cv-name{
+    font-size: 20px;
+}
+.cv-job{
+    font-size: 16px;
+}
+.img-cv{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.skill-text-cv,.lang-text-cv,
+.cv-media,.basic-info-cv,
+.pro-cv-add,
+.work-experience-cv,
+.uni-name,
+.date-name1,
+.date-name2,
+.date-name3,
+.end-date-name1,
+.end-date-name2,
+.end-date-name3,
+.country-name{
+    font-size: 12px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For small screen phones */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:400px){
+
+
+    /* ========RESUME1 IS HERE======== */
+    
+    
+    
+        .resume1,.resume2,.resume3,.resume4,.resume5,.resume6,.resume7{
+            height: 100vh;
+            width: 85%;
+        }
+        .container-cv h1{
+            font-size: 20px;
+        }
+        .bar{
+            display: none;
+        }
+    
+        .buttons-copy-img-file{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 40%;
+        }
+    .cv-nav{
+        display: none;
+    }
+    .upload-img{
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    .upload-img img{
+        border: none;
+    }
+    .resume1-btn{
+        width: 20%;
+    }
+    
+    .buttons-center{
+        height: 28%;
+    }
+    .inp-info{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 -0.5rem;
+    }
+    
+    .big-box{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* ============RESUME2 IS HERE============ */
+    
+    
+    
+    
+    
+    .school-nc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    
+    .nc1,.nc2{
+        width: 100%;
+    }
+    
+    
+    .nc1 input,.nc2 input{
+        width:80%;
+    }
+    .nc-date{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 5px;
+    }
+    
+    
+    .nc-start-date{
+        width: 100%;
+    }
+    .nc-end-date{
+        width: 100%;
+    }
+    
+    .buttons-edu{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    
+    .buttons-edu button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    
+    /* =========RESUME3 IS HERE========= */
+    
+    
+    
+    .company-jp{
+            display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* margin: 0; */
+    }
+    
+    .jp1,.jp2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .jp1 input,.jp2 input{
+        width: 80%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .jp-date{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 5px;
+    }
+    
+    
+    .jp-start-date{
+        width: 100%;
+    }
+    .jp-end-date{
+        width: 100%;
+    }
+    
+    
+    
+    .buttons-jp{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .buttons-jp button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* =====RESUME4 IS HERE====== */
+    
+    
+    
+    .btn-add-remove-cv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 40%;
+    }
+    
+    
+    .social-btn{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .social-btn button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    /* =====RESUME5 IS HERE===== */
+    
+    
+
+
+
+
+    .skill-lang-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        margin: 0 -1px;
+        height: 50%;
+    }
+
+    .skill-name-level,
+    .lang-name-level{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        width: 100%;
+        margin: 0;
+        height: 50%;
+        gap: 10px;
+    }
+    .lang{
+        width: 100%;
+        display: flex;
+    }
+    .skill{
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .lang-level span,.skill-level span{
+        font-size: 14px;
+    }
+
+
+
+    #textarea{
+        max-height: 100px;
+        max-width: 85%;
+    }
+    .resume5-buttons{
+        width: 100%;
+        height: 16%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+    
+    }
+    .resume5-buttons button{
+        width:20%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* ===========RESUME6 IS HERE========= */
+    
+    
+    .project{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        height:60%;
+        gap: 10px;
+        margin: 0 1rem;
+    }
+    .project-name,.project-link{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .project-name input,.project-link input{
+        width:80%;
+    }
+    
+    
+    .textarea{
+        height: 50%;
+    }
+    .textarea textarea{
+        width: 80%;
+    }
+    
+    .project-end-btns{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .project-end-btns button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    /* ======RESUME7 IS HERE====== */
+    
+    .template-container{
+        height: 40%;
+        margin: 0;
+    }
+    
+    .template-end-btns{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .template-end-btns button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    /* ======RESUME8 IS HERE====== */
+    .name-job{
+        display: flex;
+        gap: 10px;
+    }
+    .name-job .cv-name{
+        font-size: 20px;
+    }
+    .cv-job{
+        font-size: 16px;
+    }
+    .img-cv{
+        width: 100px;
+        height: 100px;
+    }
+    
+    
+    
+    .skill-text-cv,.lang-text-cv,
+    .cv-media,.basic-info-cv,
+    .pro-cv-add,
+    .work-experience-cv,
+    .uni-name,
+    .date-name1,
+    .date-name2,
+    .date-name3,
+    .end-date-name1,
+    .end-date-name2,
+    .end-date-name3,
+    .country-name{
+        font-size: 12px;
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SMALLER THAN SMALL SIZE PHONE */
+
+
+
+
+@media(max-width:340px){
+
+
+    /* ========RESUME1 IS HERE======== */
+    
+    
+    
+        .resume1,.resume2,.resume3,.resume4,.resume5,.resume6,.resume7{
+            height: 100vh;
+            width: 85%;
+        }
+        .container-cv h1{
+            font-size: 20px;
+        }
+        .bar{
+            display: none;
+        }
+    
+        .buttons-copy-img-file{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 40%;
+        }
+    .cv-nav{
+        display: none;
+    }
+    .upload-img{
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    .upload-img img{
+        border: none;
+    }
+    .resume1-btn{
+        width: 20%;
+    }
+    
+    .buttons-center{
+        height: 28%;
+    }
+    .inp-info{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 -0.5rem;
+    }
+    
+    .big-box{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    
+    
+    
+    
+    
+    /* ============RESUME2 IS HERE============ */
+    
+    
+    
+    
+    
+    .school-nc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    
+    .nc1,.nc2{
+        width: 100%;
+    }
+    
+    
+    .nc1 input,.nc2 input{
+        width:80%;
+    }
+    .nc-date{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 5px;
+    }
+    
+    
+    .nc-start-date{
+        width: 100%;
+    }
+    .nc-end-date{
+        width: 100%;
+    }
+    
+    .buttons-edu{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    
+    .buttons-edu button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    
+    /* =========RESUME3 IS HERE========= */
+    
+    
+    
+    .company-jp{
+            display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* margin: 0; */
+    }
+    
+    .jp1,.jp2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .jp1 input,.jp2 input{
+        width: 80%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .jp-date{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 5px;
+    }
+    
+    
+    .jp-start-date{
+        width: 100%;
+    }
+    .jp-end-date{
+        width: 100%;
+    }
+    
+    
+    
+    .buttons-jp{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .buttons-jp button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* =====RESUME4 IS HERE====== */
+    
+    
+    
+    .btn-add-remove-cv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 40%;
+    }
+    
+    
+    .social-btn{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .social-btn button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    /* =====RESUME5 IS HERE===== */
+    
+    
+
+
+
+
+    .skill-lang-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        margin: 0 -1px;
+        height: 50%;
+    }
+
+    .skill-name-level,
+    .lang-name-level{
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        width: 100%;
+        margin: 0;
+        height: 50%;
+        gap: 10px;
+    }
+
+
+    .lang{
+        width: 100%;
+        display: flex;
+    }
+    .skill{
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .lang-level span,.skill-level span{
+        font-size: 12px;
+    }
+/* 
+    .lang-level span{
+        font-size:12px ;
+    } */
+
+
+
+    #textarea{
+        max-height: 100px;
+        max-width: 75%;
+        margin: 0 .3rem;
+    }
+    .resume5-buttons{
+        width: 100%;
+        height: 16%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+    
+    }
+    .resume5-buttons button{
+        width:20%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* ===========RESUME6 IS HERE========= */
+    
+    
+    .project{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        height:60%;
+        gap: 10px;
+        margin: 0 1rem;
+    }
+    .project-name,.project-link{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .project-name input,.project-link input{
+        width:80%;
+    }
+    
+    
+    .textarea{
+        height: 50%;
+    }
+    .textarea textarea{
+        width: 80%;
+    }
+    
+    .project-end-btns{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .project-end-btns button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    /* ======RESUME7 IS HERE====== */
+    
+    .template-container{
+        height: 40%;
+        margin: 0;
+    }
+    .template-container span{
+        font-size: 14px;
+    }
+    .template-end-btns{
+        width: 100%;
+        height: 18%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    .template-end-btns button{
+        width: 20%;
+    }
+    
+    
+    
+    
+    
+    /* ======RESUME8 IS HERE====== */
+    .name-job{
+        display: flex;
+        gap: 10px;
+    }
+    .name-job h1.cv-name{
+        font-size: 14px;
+    }
+    h3.cv-job{
+        font-size: 10px;
+    }
+    .img-cv{
+        width: 100px;
+        height: 100px;
+    }
+    
+    
+    
+
+
+
+    .skill-text-cv span{
+        font-size: 8px;
+    }
+    
+.cv-skill{
+    height: 10%;
+}
+
+    .add1-text-skill1,
+    .skill-cv1,
+    .skill-cv2,
+    .skill-cv3,
+    .skill-cv4,
+    .skill-cv5{
+        font-size: 8px
+    }
+    
+    
+.cv-lang{
+    height: 10%;
+}
+
+.lang-cv1,
+.lang-cv2,
+.lang-cv3,
+.lang-cv4,
+.lang-cv5
+    {
+    font-size: 8px;
+}
+
+span.idk-select{
+    font-size: 12px;
+}
+
+
+
+.lang-span-cv1,
+.lang-span-cv2,
+.lang-span-cv3,
+.lang-span-cv4,
+.lang-span-cv5{
+    font-size: 8px;
+}
+
+.basic-info-cv{
+    height: 16%;
+}
+
+.number-cv,.email-cv,.city-cv{
+    font-size: 8px;
+}
+
+
+.pro-cv-href1,
+.pro-cv-href2,
+.pro-cv-href3,
+.project-disc1,
+.project-disc2,
+.project-disc3
+{
+    font-size: 9px;
+}
+
+.cv-education{
+    height: 19%;
+}
+.cv-education span,p{
+    font-size: 8px
+}
+.uni-name,.country-name{
+    font-size: 8px;
+}
+
+
+.cv-social-media a{
+    font-size: 8px;
+}
+
+.company-name,.company-pos{
+    font-size: 10px;
+}
+.work-experience-cv span{
+    font-size: 10px;
+}
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===FOR NORMAL PHONES=== */
+
+
+
+
+
+
+
+
+
+    @media(max-width:360px){
+
+
+        /* ========RESUME1 IS HERE======== */
+        
+        
+        
+            .resume1,.resume2,.resume3,.resume4,.resume5,.resume6,.resume7{
+                height: 100vh;
+                width: 85%;
+            }
+            .container-cv h1{
+                font-size: 20px;
+            }
+            .bar{
+                display: none;
+            }
+        
+            .buttons-copy-img-file{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 40%;
+            }
+        .cv-nav{
+            display: none;
+        }
+        .upload-img{
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+        }
+        .upload-img img{
+            border: none;
+        }
+        .resume1-btn{
+            width: 20%;
+        }
+        
+        .buttons-center{
+            height: 28%;
+        }
+        .inp-info{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 -0.5rem;
+        }
+        
+        .big-box{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+        
+        
+        
+        
+        
+        /* ============RESUME2 IS HERE============ */
+        
+        
+        
+        
+        
+        .school-nc{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        
+        .nc1,.nc2{
+            width: 100%;
+        }
+        
+        
+        .nc1 input,.nc2 input{
+            width:80%;
+        }
+        .nc-date{
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            margin: 0 5px;
+        }
+        
+        
+        .nc-start-date{
+            width: 100%;
+        }
+        .nc-end-date{
+            width: 100%;
+        }
+        
+        .buttons-edu{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+        
+        
+        .buttons-edu button{
+            width: 20%;
+        }
+        
+        
+        
+        
+        
+        
+        /* =========RESUME3 IS HERE========= */
+        
+        
+        
+        .company-jp{
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* margin: 0; */
+        }
+        
+        .jp1,.jp2{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .jp1 input,.jp2 input{
+            width: 80%;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        .jp-date{
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            margin: 0 5px;
+        }
+        
+        
+        .jp-start-date{
+            width: 100%;
+        }
+        .jp-end-date{
+            width: 100%;
+        }
+        
+        
+        
+        .buttons-jp{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+        
+        .buttons-jp button{
+            width: 20%;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* =====RESUME4 IS HERE====== */
+        
+        
+        
+        .btn-add-remove-cv{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 40%;
+        }
+        
+        
+        .social-btn{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+        .social-btn button{
+            width: 20%;
+        }
+        
+        
+        
+        
+        
+        /* =====RESUME5 IS HERE===== */
+        
+        
+    
+    
+    
+    
+        .skill-lang-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            flex-direction: column;
+            margin: 0 -1px;
+            height: 50%;
+        }
+    
+        .skill-name-level,
+        .lang-name-level{
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            width: 100%;
+            margin: 0;
+            height: 50%;
+            gap: 10px;
+        }
+        .lang{
+            width: 100%;
+            display: flex;
+        }
+        .skill{
+            min-width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+    
+        .lang-level span,.skill-level span{
+            font-size: 12px;
+        }
+    
+    
+    
+        #textarea{
+            max-height: 100px;
+            max-width: 75%;
+            margin: 0 .3rem;
+        }
+        .resume5-buttons{
+            width: 100%;
+            height: 16%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+        
+        }
+        .resume5-buttons button{
+            width:20%;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* ===========RESUME6 IS HERE========= */
+        
+        
+        .project{
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            height:60%;
+            gap: 10px;
+            margin: 0 1rem;
+        }
+        .project-name,.project-link{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .project-name input,.project-link input{
+            width:80%;
+        }
+        
+        
+        .textarea{
+            height: 50%;
+        }
+        .textarea textarea{
+            width: 80%;
+        }
+        
+        .project-end-btns{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin: 0;
+        }
+        
+        .project-end-btns button{
+            width: 20%;
+        }
+        
+        
+        
+        
+        /* ======RESUME7 IS HERE====== */
+        
+        .template-container{
+            height: 40%;
+            margin: 0;
+        }
+        .template-container span{
+            font-size: 14px;
+        }
+        .template-end-btns{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin: 0;
+        }
+        
+        .template-end-btns button{
+            width: 20%;
+        }
+        
+        
+        
+        
+        
+        /* ======RESUME8 IS HERE====== */
+        .name-job{
+            display: flex;
+            gap: 10px;
+        }
+        .name-job .cv-name{
+            font-size: 16px;
+        }
+        .cv-job{
+            font-size: 14px;
+        }
+        .img-cv{
+            width: 100px;
+            height: 100px;
+        }
+        
+        
+        
+
+
+        span.idk-select{
+            font-size: 12px;
+        }
+
+
+
+
+
+
+
+
+        .skill-text-cv span{
+            font-size: 8px;
+        }
+        
+    .cv-skill{
+        height: 10%;
+    }
+    
+        .add1-text-skill1,
+        .skill-cv1,
+        .skill-cv2,
+        .skill-cv3,
+        .skill-cv4,
+        .skill-cv5{
+            font-size: 8px
+        }
+        
+        
+    .cv-lang{
+        height: 10%;
+    }
+    
+
+
+        .lang-span-cv1,
+        .lang-span-cv2,
+        .lang-span-cv3,
+        .lang-span-cv4,
+        .lang-span-cv5{
+            font-size: 8px;
+        }
+        
+        .basic-info-cv{
+            height: 16%;
+        }
+        
+        .number-cv,.email-cv,.city-cv{
+            font-size: 8px;
+        }
+        
+        
+        .pro-cv-href1,
+        .pro-cv-href2,
+        .pro-cv-href3,
+        .project-disc1,
+        .project-disc2,
+        .project-disc3
+        {
+            font-size: 9px;
+        }
+        
+        .cv-education{
+            height: 19%;
+        }
+        .cv-education span,p{
+            font-size: 8px
+        }
+        .uni-name,.country-name{
+            font-size: 8px;
+        }
+        
+        
+        .cv-social-media a{
+            font-size: 8px;
+        }
+        
+        .company-name,.company-pos{
+            font-size: 10px;
+        }
+        .work-experience-cv span{
+            font-size: 10px;
+        }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media(max-width:383px){
+
+
+            /* ========RESUME1 IS HERE======== */
+            
+            
+            
+                .resume1,.resume2,.resume3,.resume4,.resume5,.resume6,.resume7{
+                    height: 100vh;
+                    width: 85%;
+                }
+                .container-cv h1{
+                    font-size: 20px;
+                }
+                .bar{
+                    display: none;
+                }
+            
+                .buttons-copy-img-file{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 40%;
+                }
+            .cv-nav{
+                display: none;
+            }
+            .upload-img{
+                width: 100px;
+                height: 100px;
+                margin-top: 20px;
+            }
+            .upload-img img{
+                border: none;
+            }
+            .resume1-btn{
+                width: 20%;
+            }
+            
+            .buttons-center{
+                height: 28%;
+            }
+            .inp-info{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 0 -0.5rem;
+            }
+            
+            .big-box{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            
+            
+            
+            
+            
+            
+            /* ============RESUME2 IS HERE============ */
+            
+            
+            
+            
+            
+            .school-nc{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            
+            
+            .nc1,.nc2{
+                width: 100%;
+            }
+            
+            
+            .nc1 input,.nc2 input{
+                width:80%;
+            }
+            .nc-date{
+                height: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                margin: 0 5px;
+            }
+            
+            
+            .nc-start-date{
+                width: 100%;
+            }
+            .nc-end-date{
+                width: 100%;
+            }
+            
+            .buttons-edu{
+                width: 100%;
+                height: 18%;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+            }
+            
+            
+            .buttons-edu button{
+                width: 20%;
+            }
+            
+            
+            
+            
+            
+            
+            /* =========RESUME3 IS HERE========= */
+            
+            
+            
+            .company-jp{
+                    display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                /* margin: 0; */
+            }
+            
+            .jp1,.jp2{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .jp1 input,.jp2 input{
+                width: 80%;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            .jp-date{
+                height: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                margin: 0 5px;
+            }
+            
+            
+            .jp-start-date{
+                width: 100%;
+            }
+            .jp-end-date{
+                width: 100%;
+            }
+            
+            
+            
+            .buttons-jp{
+                width: 100%;
+                height: 18%;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+            }
+            
+            .buttons-jp button{
+                width: 20%;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /* =====RESUME4 IS HERE====== */
+            
+            
+            
+            .btn-add-remove-cv{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 40%;
+            }
+            
+            
+            .social-btn{
+                width: 100%;
+                height: 18%;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+            }
+            .social-btn button{
+                width: 20%;
+            }
+            
+            
+            
+            
+            
+            /* =====RESUME5 IS HERE===== */
+            
+            
+        
+        
+        
+        
+            .skill-lang-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                flex-direction: column;
+                margin: 0 -1px;
+                height: 50%;
+            }
+        
+            .skill-name-level,
+            .lang-name-level{
+                display: flex;
+                align-items: center;
+                /* justify-content: center; */
+                width: 100%;
+                margin: 0;
+                height: 50%;
+                gap: 10px;
+            }
+            .lang{
+                width: 100%;
+                display: flex;
+            }
+            .skill{
+                min-width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        
+        
+            .lang-level span,.skill-level span{
+                font-size: 12px;
+            }
+        
+        
+        
+            #textarea{
+                max-height: 100px;
+                max-width: 75%;
+                margin: 0 .3rem;
+            }
+            .resume5-buttons{
+                width: 100%;
+                height: 16%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0;
+            
+            }
+            .resume5-buttons button{
+                width:20%;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            /* ===========RESUME6 IS HERE========= */
+            
+            
+            .project{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+                height:60%;
+                gap: 10px;
+                margin: 0 1rem;
+            }
+            .project-name,.project-link{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .project-name input,.project-link input{
+                width:80%;
+            }
+            
+            
+            .textarea{
+                height: 50%;
+            }
+            .textarea textarea{
+                width: 80%;
+            }
+            
+            .project-end-btns{
+                width: 100%;
+                height: 18%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin: 0;
+            }
+            
+            .project-end-btns button{
+                width: 20%;
+            }
+            
+            
+            
+            
+            /* ======RESUME7 IS HERE====== */
+            
+            .template-container{
+                height: 40%;
+                margin: 0;
+            }
+            .template-container span{
+                font-size: 14px;
+            }
+            .template-end-btns{
+                width: 100%;
+                height: 18%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin: 0;
+            }
+            
+            .template-end-btns button{
+                width: 20%;
+            }
+            
+            
+            
+            
+            
+            /* ======RESUME8 IS HERE====== */
+            .name-job{
+                display: flex;
+                gap: 10px;
+            }
+            .name-job .cv-name{
+                font-size: 16px;
+            }
+            .cv-job{
+                font-size: 14px;
+            }
+            .img-cv{
+                width: 100px;
+                height: 100px;
+            }
+            
+            
+            
+    
+    
+            span.idk-select{
+                font-size: 12px;
+            }
+    
+    
+    
+    
+    
+    
+    
+    
+            .skill-text-cv span{
+                font-size: 8px;
+            }
+            
+        .cv-skill{
+            height: 10%;
+        }
+        
+            .add1-text-skill1,
+            .skill-cv1,
+            .skill-cv2,
+            .skill-cv3,
+            .skill-cv4,
+            .skill-cv5{
+                font-size: 8px
+            }
+            
+            
+        .cv-lang{
+            height: 10%;
+        }
+        
+    
+    
+            .lang-span-cv1,
+            .lang-span-cv2,
+            .lang-span-cv3,
+            .lang-span-cv4,
+            .lang-span-cv5{
+                font-size: 8px;
+            }
+            
+            .basic-info-cv{
+                height: 16%;
+            }
+            
+            .number-cv,.email-cv,.city-cv{
+                font-size: 8px;
+            }
+            
+            
+            .pro-cv-href1,
+            .pro-cv-href2,
+            .pro-cv-href3,
+            .project-disc1,
+            .project-disc2,
+            .project-disc3
+            {
+                font-size: 9px;
+            }
+            
+            .cv-education{
+                height: 19%;
+            }
+            .cv-education span,p{
+                font-size: 8px
+            }
+            .uni-name,.country-name{
+                font-size: 8px;
+            }
+            
+            
+            .cv-social-media a{
+                font-size: 8px;
+            }
+            
+            .company-name,.company-pos{
+                font-size: 10px;
+            }
+            .work-experience-cv span{
+                font-size: 10px;
+            }
+    
+    
+            }
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

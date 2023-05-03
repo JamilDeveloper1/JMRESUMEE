@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMRESUMEE</title>
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="slide-about">
+<h1>Build cv for your job <br>
+    Don't wait let's start</h1>
+    <ul>
+        <li>
+            You don't need an account
+        </li>
+        <li>
+            Create a CV in minutes
+        </li>
+        <li>
+            You can only add 3 project
+        </li>
+    </ul>
+    <a href="cv.html" class="cv-btn">Create CV</a>
+    </div>
+
+
+ 
+
+
+    <nav>
+        <a href="#">JMRESUMEE</a>
+        <div class="icons">
+      <i class="fa-solid fa-circle-info" id="info"></i>
+      <i class="fas fa-times" id="close"></i>
+    </div>
+    </nav>
+    
+
+    <div class="container">
+        <div class="text-container">
+            <h1>Build your cv <br>for new job</h1>
+            <div class="create">
+            <p>Let's create a new cv with us</p>
+            <a href="cv.html" class="cv-btn">Create CV</a>
+            </div>
+        </div>
+        <img src="img1.jpg" alt="" class="img-main">
+    </div>
+
+
+
+
+<div class="end-center">
+    <p>© 2023 Created by: <a href="https://www.github.com./jamildeveloper1">Jamildeveloper1</a> </p>
+</div>
+
+
+
+
+    
+
+
+<script>
+let info = document.getElementById("info");
+
+info.addEventListener("click",()=>{
+    let slideBar = document.querySelector(".slide-about");
+    slideBar.style.transform = "translateX(0)";
+    slideBar.style.transition = "0.5s";
+    let close = document.getElementById("close");
+    close.style.display = "block";
+    info.style.display = "none";
+
+
+    close.addEventListener("click",()=>{
+        slideBar.style.transform = "translateX(-100%)";
+    slideBar.style.transition = "0.5s";
+        close.style.display = "none";
+        info.style.display = "block";
+    })
+
+})
+
+
+
+
+
+</script>
+</body>
+</html>

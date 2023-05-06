@@ -2345,6 +2345,26 @@ select{
     font-size: 12px;
 }
 
+    
+    
+    
+    
+    
+.email-cv{
+    font-size: 8px;
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -4398,7 +4418,113 @@ select{
     
     
     
+@media(max-width:320px){
 
+
+    .name-job{
+        display: flex;
+        gap: 10px;
+    }
+    .name-job .cv-name{
+        font-size: 16px;
+    }
+    .cv-job{
+        font-size: 14px;
+    }
+    .img-cv{
+        width: 100px;
+        height: 100px;
+    }
+    
+
+
+
+
+
+
+
+
+    .skill-text-cv span{
+        font-size: 8px;
+    }
+    
+.cv-skill{
+    height: 10%;
+}
+
+    .add1-text-skill1,
+    .skill-cv1,
+    .skill-cv2,
+    .skill-cv3,
+    .skill-cv4,
+    .skill-cv5{
+        font-size: 8px
+    }
+    
+    
+.cv-lang{
+    height: 10%;
+}
+
+
+
+    .lang-span-cv1,
+    .lang-span-cv2,
+    .lang-span-cv3,
+    .lang-span-cv4,
+    .lang-span-cv5{
+        font-size: 8px;
+    }
+    
+    .basic-info-cv{
+        height: 16%;
+    }
+    
+    .number-cv,.email-cv,.city-cv{
+        font-size: 8px;
+    }
+    
+    
+    .pro-cv-href1,
+    .pro-cv-href2,
+    .pro-cv-href3,
+    .project-disc1,
+    .project-disc2,
+    .project-disc3
+    {
+        font-size: 9px;
+    }
+    
+    .cv-education{
+        height: 19%;
+    }
+    .cv-education span,p{
+        font-size: 8px
+    }
+    .uni-name,.country-name{
+        font-size: 8px;
+    }
+    .email-cv{
+        font-size: 5px;
+    }
+    
+    .cv-social-media a{
+        font-size: 8px;
+    }
+    
+    .company-name,.company-pos{
+        font-size: 10px;
+    }
+    .work-experience-cv span{
+        font-size: 10px;
+    }
+
+    .basic-info-cv .city-name{
+        font-size: 8px;
+    }
+
+
+    }
 
 
 

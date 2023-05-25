@@ -1,3 +1,5 @@
+I am Muradov Jamil. Frontend developer.I love coding. Thanks
+
 # JMRESUMEE
 
 https://jamildeveloper1.github.io/JMRESUMEE

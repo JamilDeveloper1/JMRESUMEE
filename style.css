@@ -101,7 +101,7 @@ nav a{
     /* align-items: center; */
     justify-content: space-around;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0 2rem;
 }
 
 .text-container h1{
@@ -109,7 +109,7 @@ nav a{
     font-weight: 800;
 }
 
-.create{
+.text-container .create{
     width: 99%;
     display: flex;
     align-items: center;
@@ -117,6 +117,7 @@ nav a{
     height: 20%;
     box-shadow: 2px 2px 2px 4px rgb(207, 207, 190);
     border-radius: 10px;
+    padding:1rem;
 }
 
 .create p{
